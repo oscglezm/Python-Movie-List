@@ -1,0 +1,217 @@
+
+<head>
+    <meta charset="utf-8">
+    <title>My Movie trailer!</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen">
+        body {
+            padding-top: 80px;
+        }
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile {
+            margin-bottom: 20px;
+            padding-top: 20px;
+        }
+        .movie-tile:hover {
+            background-color: #EEE;
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: white;
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head>
+
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Main Page Content -->
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#"> Favorite Movie Trailers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="YmvHzCLP6ug" data-toggle="modal" data-target="#trailer">
+    <h5><strong> PG-13 | 2h 38min | Musical | 7.6</strong> </h5>
+    <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/Les-miserables-movie-poster1.jpg" width="220" height="342">
+    <h2>Les Miserables</h2>
+    <h5>Set in France during the early 19th century, the film tells the story of Jean Valjean, an ex-convict who, inspired by a kindly bishop, decides to turn his life around.</h5>
+
+</div>
+
+
+
+
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="sY1S34973zA" data-toggle="modal" data-target="#trailer">
+    <h5><strong> R | 2h 55min | Crime | 9.2</strong> </h5>
+    <img src="https://upload.wikimedia.org/wikipedia/en/a/af/The_Godfather,_The_Game.jpg" width="220" height="342">
+    <h2>The godfather</h2>
+    <h5>The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son. </h5>
+
+</div>
+
+
+
+
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="4sj1MT05lAA" data-toggle="modal" data-target="#trailer">
+    <h5><strong> G | 1h 28min | Animation | 8.5</strong> </h5>
+    <img src="https://upload.wikimedia.org/wikipedia/en/3/3d/The_Lion_King_poster.jpg" width="220" height="342">
+    <h2>The lion king</h2>
+    <h5>Lion cub and future king Simba searches for his identity. His eagerness to please others and penchant for testing his boundaries sometimes gets him into trouble. </h5>
+
+</div>
+
+
+
+
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="Rt2LHkSwdPQ" data-toggle="modal" data-target="#trailer">
+    <h5><strong> PG-13 | 2h 49min | Sci-Fi | 8.6</strong> </h5>
+    <img src="https://upload.wikimedia.org/wikipedia/ro/thumb/b/bc/Interstellar_film_poster.jpg/260px-Interstellar_film_poster.jpg" width="220" height="342">
+    <h2>Interstellar</h2>
+    <h5>A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival. </h5>
+
+</div>
+
+
+
+
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="tFMo3UJ4B4g" data-toggle="modal" data-target="#trailer">
+    <h5><strong> PG-13 | 1h 56min | Sci-Fi | 8.0</strong> </h5>
+    <img src="https://upload.wikimedia.org/wikipedia/en/archive/d/df/20161020171048!Arrival,_Movie_Poster.jpg" width="220" height="342">
+    <h2>Arrival</h2>
+    <h5>When twelve mysterious spacecraft appear around the world, linguistics professor Louise Banks is tasked with interpreting the language of the apparent alien visitors. </h5>
+
+</div>
+
+
+
+
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="Qq0B0NVKghA" data-toggle="modal" data-target="#trailer">
+    <h5><strong> R | 56 min | Adventure | 9.5 | 7 | 73</strong> </h5>
+    <img src="https://upload.wikimedia.org/wikipedia/en/d/d8/Game_of_Thrones_title_card.jpg" width="220" height="342">
+    <h2>Game of Thrones</h2>
+    <h5>Nine noble families fight for control over the mythical lands of Westeros; A forgotten race returns after being dormant for thousands of years.</h5>
+
+</div>
+
+
+
+
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="1YMs41xh52c" data-toggle="modal" data-target="#trailer">
+    <h5><strong> R | 1h 53min | Sci-Fi | 7.7</strong> </h5>
+    <img src="https://upload.wikimedia.org/wikipedia/en/4/43/Butterflyeffect_poster.jpg" width="220" height="342">
+    <h2>The butterfly effect</h2>
+    <h5>Evan Treborn suffers blackouts during significant events of his life. As he grows up, he finds a way to remember these lost memories and a supernatural way to alter his life by reading his journal. </h5>
+
+</div>
+
+
+
+
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="IuS5huqOND4" data-toggle="modal" data-target="#trailer">
+    <h5><strong> TV-MA | 1h | Sci-Fi | 9.1 | 2 | 20</strong> </h5>
+    <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/11/19/12/westworld-hbo-1.jpg" width="220" height="342">
+    <h2>Westworld</h2>
+    <h5>Set at the intersection of the near future and the reimagined past, explore a world in which every human appetite can be indulged. </h5>
+
+</div>
+
+
+
+
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="1WLO0Owi5-A" data-toggle="modal" data-target="#trailer">
+    <h5><strong> TV-14 | 24 min | Animation | 8.5 | 24 | 500</strong> </h5>
+    <img src="http://vignette4.wikia.nocookie.net/toonami/images/0/08/Shipuden.jpg/revision/latest/scale-to-width-down/300?cb=20131107012205" width="220" height="342">
+    <h2>Naruto: Shippuden</h2>
+    <h5>Naruto Uzumaki, is a loud, hyperactive, adolescent ninja who constantly searches for approval and recognition, as well as to become Hokage, who is acknowledged as the leader and strongest of all ninja in the village. </h5>
+
+</div>
+
+
+
+
+    </div>
+  </body>
+</html>
