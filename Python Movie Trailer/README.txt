@@ -1,16 +1,29 @@
 I. Run "Movie Trailer Website":
 ------------
 
-    Windows:
+Open up your terminal and run:
 
-        - 1. Open fresh_tomatoes.html or
-        - 2. Open CMD and run the following line:
-         C:\Python27\Python.exe \Project_Path..\entertaiment_center.py
+$ python
+
+It should return some version of Python 2.7. If you are running Python 3.0, you will need to run some sort of virtual environment: http://docs.python-guide.org/en/latest/dev/virtualenvs/
+
+If Python is not installed at all, see the documentation here: https://www.python.org
 
 
-II. File list
+II. Execute the program:
 ------------
- - media.py: It contains two class definition, movie and series class.
+
+$ python entertainment.py
+
+A browser should open on your local machine and and render the HTML template: fresh_tomatoes.html
+
+
+III. File List
+------------
+ - media.py: It contains two classes definition, movie and series class.
  - fresh_tomatoes.py: It brings the website template.
  - entertaiment_center.py: It provides the instance for each movie and series in order
     to pass the list to the fresh_tomatoes.py and shows the content.
+
+	
+ 
