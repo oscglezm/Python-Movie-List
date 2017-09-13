@@ -2,7 +2,7 @@
 Simple website built with Python to display my list of popular movies. 
 
 I. Run "Movie Trailer Website":
-------------
+-------------------------------
 
 Open up your terminal and run:
 
@@ -14,15 +14,14 @@ If Python is not installed at all, see the documentation here: https://www.pytho
 
 
 II. Execute the program:
-------------
-
+------------------------
 $ python entertainment.py
 
-A browser should open on your local machine and and render the HTML template: fresh_tomatoes.html
+- A browser should open on your local machine and and render the HTML template: fresh_tomatoes.html
 
 
 III. File List
-------------
+--------------
  - media.py: It contains two classes definition, movie and series class.
  - fresh_tomatoes.py: It brings the website template.
  - entertaiment_center.py: It provides the instance for each movie and series in order
