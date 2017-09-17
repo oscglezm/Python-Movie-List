@@ -15,7 +15,7 @@ If Python is not installed at all, see the documentation here: https://www.pytho
 
 II. Execute the program:
 ------------------------
-$ python entertainment.py
+$ `python entertainment.py`
 
 - A browser should open on your local machine and and render the HTML template: fresh_tomatoes.html
 
