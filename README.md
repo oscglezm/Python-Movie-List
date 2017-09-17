@@ -6,7 +6,7 @@ I. Run "Movie Trailer Website":
 
 Open up your terminal and run:
 
-$ 'python'
+$ ´python´
 
 It should return some version of Python 2.7. If you are running Python 3.0, you will need to run some sort of virtual environment: http://docs.python-guide.org/en/latest/dev/virtualenvs/
 
