@@ -22,8 +22,7 @@ III. File List
 ------------
  - media.py: It contains two classes definition, movie and series class.
  - fresh_tomatoes.py: It brings the website template.
- - entertaiment_center.py: It provides the instance for each movie and series in order
-    to pass the list to the fresh_tomatoes.py and shows the content.
+ - entertaiment_center.py: It provides the instance for each movie and series in order to pass the list to the fresh_tomatoes.py and shows the content.
 
 	
  
