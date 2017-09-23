@@ -17,7 +17,7 @@ II. Execute the program:
 ------------------------
 $ `python entertainment.py`
 
-- A browser should open on your local machine and and render the HTML template: ~~__fresh_tomatoes.html__~~
+- A browser should open on your local machine and and render the HTML template: __fresh_tomatoes.html__
 
 
 III. File List
