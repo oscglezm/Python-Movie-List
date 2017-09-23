@@ -36,6 +36,5 @@ class Series(Movie):
 
     def show_head_info(self):
         """This method override the show_head_info parent adding more info. """
-        head_info = self.rating + " | " + self.duration + " | " + self.category\
-        + " | " + self.ranking + " | " + self.seasons + " | " + self.episodes
+        head_info = Movie.show_head_info(self) + " | " + self.seasons + " | " + self.episodes
         return head_info
