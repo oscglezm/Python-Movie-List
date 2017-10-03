@@ -1,7 +1,7 @@
 # Python-Movie-Trailer
 Simple website built with Python to display my list of popular movies. 
 
-I. Run "Movie Trailer Website":
+I. Run "Movie Trailer Website"
 -------------------------------
 
 Open up your terminal and run:
