@@ -13,7 +13,7 @@ It should return some version of Python *2.7*. If you are running Python *3.0*, 
 If Python is not installed at all, see the documentation here: https://www.python.org
 
 
-II. Execute the program:
+II. Execute the program
 ------------------------
 $ `python entertainment.py`
 
